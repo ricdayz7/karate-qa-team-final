@@ -1,14 +1,14 @@
 name: Pruebas de Automatizacion
 
-  on:
+on:
   push:
     branches:
-    - gmain
+      - main
 
-  jobs:
-    prueba:
-      runs-on: ubuntu-latest
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
 
-      steps:
+    steps:
       - name: Validar consola
-        run : echo "Hola, esta es una prueba de automatizacion en GitHub Actions"
+        run: echo "Hola, esta es una prueba de automatizacion en GitHub Actions"
