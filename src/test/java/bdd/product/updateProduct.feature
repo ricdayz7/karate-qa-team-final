@@ -9,7 +9,7 @@ Feature: Actualizar productos
 
   Scenario Outline: CP01-Actualizar producto existente
 
-    * def schema = read('classpath:resources/json/Product/schema.json').schemaAddProduct
+    * def schema = read('classpath:resources/json/Product/schema.json').schemaProductoUpdate
     * def requestBody = read('classpath:resources/json/Product/request.json').requestProduct
     * def idProductoNum = parseInt(idProducto)
 

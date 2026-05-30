@@ -7,11 +7,25 @@
     "categoria_id": "#number",
     "precio": "#string",
     "stock": "#string",
-    "estado": "#number",
+    "estado": "#string",
     "descripcion": "#string",
     "updated_at": "#string",
     "created_at": "#string",
     "id": "#number"
+  },
+  "schemaProductoUpdate": {
+    "id": "#number",
+    "codigo": "#string",
+    "nombre": "#string",
+    "medida": "#string",
+    "marca_id": "#number",
+    "categoria_id": "#number",
+    "precio": "#string",
+    "stock": "#number",
+    "estado": "#number",
+    "descripcion": "#string",
+    "created_at": "#string",
+    "updated_at": "#string"
   },
   "schemaProducto": {
     "id": "#number",
