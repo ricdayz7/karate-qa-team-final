@@ -6,7 +6,7 @@
     "marca_id": "#number",
     "categoria_id": "#number",
     "precio": "#string",
-    "stock": "#number",
+    "stock": "#string",
     "estado": "#number",
     "descripcion": "#string",
     "updated_at": "#string",
