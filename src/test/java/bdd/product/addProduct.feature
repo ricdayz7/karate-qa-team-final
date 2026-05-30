@@ -22,7 +22,7 @@ Feature: Nuevos productos
 
         Examples:
             | codigo | nombre     | medida | marca     | categoria | precio  | stock | estado | descripcion         |
-            | CP1990 | MSI        | UND    | Generico  | Repuestos | 5500.00 | 11    | 1      | Stealth 14 pulgadas |
+            | CP1991 | MSI        | UND    | Generico  | Repuestos | 5500.00 | 11    | 1      | Stealth 14 pulgadas |
 
 
     Scenario: CP02-Listar todos los productos agregados
