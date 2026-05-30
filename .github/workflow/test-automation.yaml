@@ -2,7 +2,8 @@ name: Pruebas de Automatizacion
 
   on:
   push:
-    branches: [ main ]
+    branches:
+    - gmain
 
   jobs:
     prueba:
