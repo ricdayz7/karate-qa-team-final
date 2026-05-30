@@ -8,10 +8,14 @@ Feature: Nuevos productos
         * header Authorization = 'Bearer ' + tokenLogin
 
     Scenario Outline: CP01-Agregar un nuevo producto
+        * def uuid = java.util.UUID.randomUUID().toString().substring(0, 6).toUpperCase()
+        * def codigo = 'QA' + uuid
+
         * def requestBody = read('classpath:resources/json/Product/request.json').requestProduct
         * def schema = read('classpath:resources/json/Product/schema.json').schemaAddProduct
 
         Given url urlBase + '/api/v1/producto'
+        And header Authorization = 'Bearer ' + tokenLogin
         And request requestBody
         When method post
         Then status 200
@@ -21,8 +25,8 @@ Feature: Nuevos productos
         And match response.created_at == response.updated_at
 
         Examples:
-            | codigo | nombre     | medida | marca     | categoria | precio  | stock | estado | descripcion         |
-            | QA001 | MSI        | UND    | Generico  | Repuestos | 5500.00 | 11    | 1      | Stealth 14 pulgadas |
+            | nombre | medida | marca    | categoria | precio  | stock | estado | descripcion         |
+            | MSI    | UND    | Generico | Repuestos | 5500.00 | 11    | 1      | Stealth 14 pulgadas |
 
 
     Scenario: CP02-Listar todos los productos agregados

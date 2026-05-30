@@ -3,9 +3,14 @@
 Feature: Registrar Usuario
 
   Scenario Outline: CP01-Registar usuario nuevo
+    * def uuid = java.util.UUID.randomUUID().toString().substring(0, 8)
+    * def emailUnico = 'qa_' + uuid + '@test.com'
+
     * def requestBody = read('classpath:resources/json/auth/bodyLogin.json').registerRequest
     * def headers = read('classpath:resources/json/auth/headers.json').registerAuth
     * def schema = read('classpath:resources/json/auth/schema.json').registerResponseSchema
+
+    * set requestBody.email = emailUnico
 
     * print requestBody
     Given url urlBase + '/api/register'
@@ -14,7 +19,7 @@ Feature: Registrar Usuario
     When method post
     Then status 200
     And match response == schema
-    And match response.data.email == "<email>"
+    And match response.data.email == emailUnico
 
     Examples:
       |read('classpath:resources/csv/auth/dataLogin.csv')|
