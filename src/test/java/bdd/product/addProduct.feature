@@ -8,7 +8,7 @@ Feature: Nuevos productos
         * header Authorization = 'Bearer ' + tokenLogin
 
     Scenario Outline: CP01-Agregar un nuevo producto
-        * def uuid = java.util.UUID.randomUUID().toString().substring(0, 6).toUpperCase()
+        * def uuid = java.util.UUID.randomUUID().toString().substring(0, 4).toUpperCase()
         * def codigo = 'QA' + uuid
 
         * def requestBody = read('classpath:resources/json/Product/request.json').requestProduct
