@@ -1,1 +1,13 @@
-{ "title": "foo","body": "bar", "userId": 1}
+{
+  "registerRequest": {
+    "email": "#(email)",
+    "password": "#(password)",
+    "nombre": "#(nombre)",
+    "tipo_usuario_id": "#(tipoUsuarioId)",
+    "estado": "#(estado)"
+  },
+  "loginRequest": {
+    "email": "#(user)",
+    "password": "#(password)"
+  }
+}

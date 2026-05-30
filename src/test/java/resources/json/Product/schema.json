@@ -1,0 +1,42 @@
+{
+  "schemaAddProduct":{
+    "codigo": "#string",
+    "nombre": "#string",
+    "medida": "#string",
+    "marca_id": "#number",
+    "categoria_id": "#number",
+    "precio": "#string",
+    "stock": "#number",
+    "estado": "#number",
+    "descripcion": "#string",
+    "updated_at": "#string",
+    "created_at": "#string",
+    "id": "#number"
+  },
+  "schemaProducto": {
+    "id": "#number",
+    "codigo": "#string",
+    "nombre": "#string",
+    "precio": "#regex ^\\d+(\\.\\d{2})?$",
+    "stock": "#number",
+    "descripcion": "#string",
+    "categoria": "#string",
+    "marca": "#string",
+    "estado": "#number"
+  },
+  "schemaListarTodo": {
+    "data": "#[] #(producto)"
+  },
+  "schemaProductoById": {
+    "id": "#number",
+    "codigo": "#string",
+    "nombre": "#string",
+    "medida": "#string",
+    "marca": "#string",
+    "categoria": "#string",
+    "precio": "#string",
+    "stock": "#number",
+    "estado": "#number",
+    "descripcion": "#string"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "registerResponseSchema": {
+    "data": {
+      "nombre": "#string",
+      "email": "#string",
+      "password": "#string",
+      "estado": "#string",
+      "tipo_usuario_id": "#string",
+      "updated_at": "#string",
+      "created_at": "#string",
+      "id": "#number"
+    },
+    "access_token": "#string",
+    "token_type": "#string"
+  },
+
+  "loginResponseSchema": {
+    "message": "#string",
+    "access_token": "#string",
+    "token_type": "#string",
+    "user": {
+      "id": "#number",
+      "nombre": "#string",
+      "email": "#string",
+      "password": "#string",
+      "estado": "#number",
+      "tipo_usuario_id": "#number",
+      "created_at": "#string",
+      "updated_at": "#string"
+    }
+  }
+}
