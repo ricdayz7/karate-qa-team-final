@@ -3,7 +3,7 @@
 Feature: Registrar Usuario
 
   Scenario Outline: CP01-Registar usuario nuevo
-    * def uuid = java.util.UUID.randomUUID().toString().substring(0, 8)
+    * def uuid = java.util.UUID.randomUUID().toString().substring(0, 4)
     * def emailUnico = 'qa_' + uuid + '@test.com'
 
     * def requestBody = read('classpath:resources/json/auth/bodyLogin.json').registerRequest
